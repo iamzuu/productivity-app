@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "title": "Mencoba DOS Laptop",
+    "done": false,
+    "deadline": "2025-11-15",
+    "mata_kuliah": "Keamanan Internet of Things",
+    "deskripsi": "1. cari rate limiting, dipelajari\r\n2. coba stress test - DOS ur private PC \r\n(catat lambatnya kapan, liat di task managernya, CPU brp, RAM brp, Storage brp, \r\nlagnya kapan, \r\nalmost not responding ditandai apknya whitescreen)"
+  },
+  {
+    "title": "Laporan Praktikum 2",
+    "done": false,
+    "deadline": "2025-11-30",
+    "mata_kuliah": "Sistem Tertanam",
+    "deskripsi": "di lms"
+  },
+  {
+    "title": "Proyek Solder PID",
+    "done": false,
+    "deadline": "2025-12-06",
+    "mata_kuliah": "Metode Perancangan Modul Kripto",
+    "deskripsi": "list proyek bikin solder, deadline UTS\r\n1) gagang solder 5 pin, plg murah 35 rb, yg bagus t12 = 135rb\r\n2) D4184 dual MOSFET = 5rb\r\n3) MAX6675 K-type Thermocouple\r\n4) stm32f401\r\n5) oled \r\n6) potensiometer 5K / 10K / 50K; kalau beli potensiometer multiturn\r\n7) PDSink PD QC Decoy Modul Trigger 5V 9V 12V 15V 20V 100W\r\n8) mata solder bagus"
+  },
+  {
+    "title": "Membuat Semua Tugas Pemrograman Sinyal Digital",
+    "done": false,
+    "deadline": "2025-12-06",
+    "mata_kuliah": "Pemrosesan Sinyal Digital",
+    "deskripsi": "pelajari dari awal terkait MATLAB"
+  },
+  {
+    "title": "Machine Learning",
+    "done": false,
+    "deadline": "2025-12-06",
+    "mata_kuliah": "Data Sains",
+    "deskripsi": "Membuat proyek random forest dari dataset BoT-IoT"
+  }
+]
