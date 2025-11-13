@@ -20,14 +20,18 @@ def load_tasks() -> List[Dict[str, Any]]:
     try:
         with open(DATA_FILE, "r", encoding="utf-8") as f:
             items = json.load(f)
-            # Ensure all tasks have required fields
+            # Ensure all tasks have required fields (backward compatibility)
             for item in items:
                 if "title" not in item:
                     item["title"] = "Untitled"
                 if "done" not in item:
                     item["done"] = False
-                if "date" not in item:
-                    item["date"] = None
+                if "deadline" not in item:
+                    item["deadline"] = None
+                if "mata_kuliah" not in item:
+                    item["mata_kuliah"] = ""
+                if "deskripsi" not in item:
+                    item["deskripsi"] = ""
             return items
     except FileNotFoundError:
         return []
@@ -42,9 +46,15 @@ def save_tasks(tasks: List[Dict[str, Any]]) -> None:
         json.dump(tasks, f, indent=2, ensure_ascii=False)
 
 
-def add_task(tasks: List[Dict[str, Any]], title: str, date: str = None) -> Dict[str, Any]:
-    """Add a new task and return the created task object."""
-    task = {"title": title.strip(), "done": False, "date": date}
+def add_task(tasks: List[Dict[str, Any]], title: str, mata_kuliah: str = "", deadline: str = None, deskripsi: str = "") -> Dict[str, Any]:
+    """Add a new task with all parameters and return the created task object."""
+    task = {
+        "title": title.strip(),
+        "done": False,
+        "deadline": deadline,
+        "mata_kuliah": mata_kuliah.strip(),
+        "deskripsi": deskripsi.strip(),
+    }
     tasks.append(task)
     save_tasks(tasks)
     return task
